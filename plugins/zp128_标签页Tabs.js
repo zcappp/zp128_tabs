@@ -27,7 +27,7 @@ function onInit({ container, props }) {
     setTimeout(() => {
         const el = container.firstChild.children[props.initTab || 0]
         el && el.click()
-    })
+    }, 200)
 }
 
 const css = `
