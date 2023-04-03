@@ -23,7 +23,7 @@ function click(ref, tab, arr, $x, $index) {
     if (ref.props.onClick) ref.exc(ref.props.onClick, { ...ref.ctx, $x, $index }, () => ref.exc("render()"))
 }
 
-function onInit({ container, props }) {
+function init({ container, props }) {
     setTimeout(() => {
         const el = container.firstChild.children[props.initTab || 0]
         el && el.click()
@@ -96,6 +96,6 @@ $plugin({
         label: "onClick"
     }],
     render,
-    onInit,
+    init,
     css
 })
