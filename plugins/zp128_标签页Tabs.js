@@ -20,7 +20,7 @@ function click(ref, tab, arr, $x, $index) {
     const ink = ref.container.lastChild
     ink.style.transform = "translate3d(" + $index * 100 + "%, 0px, 0px)"
     ink.style.width = 100 / arr.length + "%"
-    if (ref.props.onClick) ref.exc(ref.props.onClick, { ...ref.ctx, $x, $index }, () => ref.exc("render()"))
+    if (ref.props.click) ref.exc(ref.props.click, { ...ref.ctx, $x, $index }, () => ref.exc("render()"))
 }
 
 function init({ container, props }) {
@@ -91,7 +91,7 @@ $plugin({
         label: "初始标签下标",
         ph: "0"
     }, {
-        prop: "onClick",
+        prop: "click",
         type: "exp",
         label: "onClick"
     }],
