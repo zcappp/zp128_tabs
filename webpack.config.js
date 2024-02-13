@@ -5,7 +5,7 @@ module.exports = {
     mode: process.env.mode || "development",
     devtool: false,
     entry: {
-        "zp128": "./plugins/zp128_标签页Tabs.js",
+        "zp128": "./src/zp128_标签页Tabs.js",
     },
     output: {
         path: path.join(__dirname, "build/"),
